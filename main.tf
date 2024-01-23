@@ -13,13 +13,12 @@ provider "aws" {
   region  = "us-east-1"
 }
 
-resource "aws_instance" "instance_example" {
-    ami           = "ami-00b8917ae86a424c9"
-    instance_type = "t2.micro"
-
-
-  tags = {
-    name = var.instance_name
-  }
+module "EC2" {
+  source = "./Modules/EC2"
 }
-
+module "S3" {
+  source = "./Modules/S3"
+}
+module "AWS_SG" {
+  source = "./Modules/AWS_SG"
+}

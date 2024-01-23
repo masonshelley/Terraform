@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"AWS_SG","Source":"./Modules/AWS_SG","Dir":""},{"Key":"EC2","Source":"./Modules/EC2","Dir":""},{"Key":"S3","Source":"./Modules/S3","Dir":""}]}
