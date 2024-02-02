@@ -2,7 +2,7 @@
 resource "aws_cloudwatch_event_rule" "rotate_credentials_rule" {
   name                = "RotateCredentialsEvery60Days"
   description         = "Rule to rotate user credentials in Systems Manager (SSM) every 60 days"
-  schedule_expression = "cron(0 0 * /60 * *)" # Cron expression for every 60 days
+  schedule_expression = "rate(60 days)" # Cron expression for every 60 days
 
   tags = {
     Name = "RotateCredentialsRule"
